@@ -23,6 +23,9 @@ class SuperHeroAdapter(private val context: Context, private val superhero: List
             imgSuperhero.setImageResource(superhero.imgSuperhero)
             nameSuperhero.text = superhero.nameSuperhero
             descSuperhero.text = superhero.descSuperhero
+            itemView.setOnClickListener {
+                listener(superhero)
+            }
         }
     }
 
